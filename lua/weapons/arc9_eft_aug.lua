@@ -630,7 +630,6 @@ local rik_reloademptya1 = {
 SWEP.Animations = {
     ["idle"] = { 
         Source = "idle", 
-        Time = 100,       -- REMOVE TIME !!!!!!!!   
     },
 
     ["idle_empty"] = { 
@@ -973,8 +972,8 @@ SWEP.Animations = {
 SWEP.missingpartsnotifsent = 0
 
 function SWEP:HookP_BlockFire()
-    if  !self:GetValue("HasGrip") or 
-        !self:GetValue("HasReceiver") or
+    -- if  !self:GetValue("HasGrip") or 
+    if  !self:GetValue("HasReceiver") or 
         !self:GetValue("HasBarrel") or
         !self:GetValue("HasBolt") or
         !self:GetValue("HasAmmoooooooo") then
@@ -989,8 +988,8 @@ function SWEP:HookP_BlockFire()
 end
 
 function SWEP:Hook_RedPrintName()
-    if  !self:GetValue("HasGrip") or 
-        !self:GetValue("HasReceiver") or
+    -- if  !self:GetValue("HasGrip") or 
+    if  !self:GetValue("HasReceiver") or 
         !self:GetValue("HasBarrel") or
         !self:GetValue("HasBolt") or
         !self:GetValue("HasAmmoooooooo") then
@@ -1097,3 +1096,11 @@ SWEP.AimDownSightsTimeMultShooting = 4
 
 SWEP.RicochetSounds = ARC9EFT.RicochetSounds
 SWEP.ShellSounds = ARC9EFT.Shells556
+
+-- so horrible
+SWEP.Hook_Think = function(swep) 
+    if swep:GetValue("HasGrip") then
+        swep.LHIKModel = nil
+        swep.LHIKModelWM  = nil
+    end
+end

@@ -42,6 +42,10 @@ ATT.Attachments = {
     },
 }
 
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/lhik_nogripaug.mdl"
+ATT.LHIK = true 
+ATT.ModelOffset = Vector(-1.8, 0, -2)
+
 ARC9.LoadAttachment(ATT, "eft_aug_barrel_16")
 
 ///////////////////////////////////////      eft_aug_barrel_20
@@ -87,6 +91,10 @@ ATT.Attachments = {
     },
 }
 
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/lhik_nogripaug.mdl"
+ATT.LHIK = true 
+ATT.ModelOffset = Vector(-1.8, 0, -2)
+
 ARC9.LoadAttachment(ATT, "eft_aug_barrel_20")
 
 ///////////////////////////////////////      eft_aug_barrel_16a1
@@ -130,6 +138,10 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/lhik_nogripaug.mdl"
+ATT.LHIK = true 
+ATT.ModelOffset = Vector(-1.8, 0, -2)
 
 ARC9.LoadAttachment(ATT, "eft_aug_barrel_16a1")
 
@@ -211,7 +223,7 @@ ATT.Attachments = {
         ExcludeElements = {"IronsBlockingSight"},
     },
     {
-        PrintName = "Optic",
+        PrintName = "Tactical",
         Category = {"eft_tactical_pistol"},
         Pos = Vector(1.5, 0.98, -3.55),
         Ang = Angle(0, 0, 90),
