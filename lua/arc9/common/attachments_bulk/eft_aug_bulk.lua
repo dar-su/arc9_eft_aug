@@ -593,6 +593,8 @@ ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.NoFlash = true
 
+ATT.ModelOffset  = Vector(-2.12, 0, 0)
+
 ATT.Category = {"eft_aug_muzzle"}
 
 ARC9.LoadAttachment(ATT, "eft_muzzle_aug_t4")
@@ -756,3 +758,36 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "eft_aug_wht")
+
+///////////////////////////////////////      eft_aug_fde     NOT MADE BY DARSU
+
+ATT = {}
+
+ATT.PrintName = "FDE"
+ATT.CompactName = "FDE"
+ATT.Icon = Material("entities/eft_aug_attachments/fde.png", "mips smooth")
+ATT.Description = [[FDE color instead of green AUG parts.
+
+Not presents in EFT, custom att.]]
+
+ATT.SortOrder = -90
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.SubMaterial0 = "models/weapons/arc9/darsu_eft/aug/weapon_steyr_aug_a1_upper_556x45_LOD0_fde"
+ATT.SubMaterial1 = "models/weapons/arc9/darsu_eft/aug/weapon_steyr_aug_a1_lower_556x45_LOD0_fde"
+ATT.SubMaterial2 = "models/weapons/arc9/darsu_eft/aug/foregrip_aug_steyr_a1_foregrip_LOD0_fde"
+ATT.SubMaterial3 = "models/weapons/arc9/darsu_eft/aug/charge_aug_steyr_a1_handle_LOD0_fde"
+
+ATT.Category = {"eft_custom_aug"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Custom slot",
+        Pos = Vector(0, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Category = {"eft_custom_slot", "eft_custom_aug"},
+ 
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_aug_fde")
