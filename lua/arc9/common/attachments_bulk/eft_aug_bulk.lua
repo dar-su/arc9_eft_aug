@@ -198,6 +198,7 @@ ATT.Sights = {
         OnSwitchToSight = function(self, slottbl)
             if CLIENT then ARC9EFTdrawnumber("1.5x") end
         end,
+        RTScopeMagnification = 1.5,
     },
 }
 
@@ -211,7 +212,7 @@ ATT.RTScopeShadowIntensity = 25
 ATT.RTScopeBlackBox = true 
 ATT.RTScopeBlackBoxShadow = true 
 
-ATT.ScopeScreenRatio = 0.66
+ATT.ScopeScreenRatio = 398/1080
 
 ATT.Attachments = {
     {
@@ -329,6 +330,7 @@ ATT.Sights = {
         OnSwitchToSight = function(self, slottbl)
             if CLIENT then ARC9EFTdrawnumber("1.5x") end
         end,
+        RTScopeMagnification = 1.5,
     },
     {
         Pos = Vector(-0.075, 12, -4.44),
@@ -349,7 +351,7 @@ ATT.RTScopeShadowIntensity = 25
 ATT.RTScopeBlackBox = true 
 ATT.RTScopeBlackBoxShadow = true 
 
-ATT.ScopeScreenRatio = 0.66
+ATT.ScopeScreenRatio = 462/1080
 
 ARC9.LoadAttachment(ATT, "eft_aug_upper_stg")
 
