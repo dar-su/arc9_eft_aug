@@ -793,3 +793,161 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "eft_aug_fde")
+
+
+
+
+
+-- 0.15.5 new stuff
+
+///////////////////////////////////////      eft_aug_grip_mount
+
+ATT = {}
+
+ATT.PrintName = "Steyr AUG Corvus Defensio KeyMod Forward Accessory Rail"
+ATT.CompactName = "AUG Corvus"
+ATT.Icon = Material("entities/eft_aug_attachments/augbottomrail.png", "mips smooth")
+ATT.Description = [[A KeyMod interface mount that replaces the standard front grip and allows installation of various accessories, designed for the AUG assault rifle. Manufactured by Corvus Defensio.]]
+
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+-- ATT.HasGrip = true
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_aug_fg"}
+
+ATT.Attachments = {
+    {
+        PrintName = "B Keymod",
+        Category = {"eft_mount_keymod6", "eft_mount_keymod"},
+        Pos = Vector(-1.25, 0, -1.2),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = "L Keymod",
+        Category = {"eft_mount_keymod2_corvusonly"},
+        Pos = Vector(-2.7, -0.29, -1.5),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = "R Keymod",
+        Category = {"eft_mount_keymod2_corvusonly"},
+        Pos = Vector(-2.7, 0.29, -1.5),
+        Ang = Angle(0, 0, 180),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_aug_grip_mount")
+
+///////////////////////////////////////      eft_aug_upper_vltor
+
+ATT = {}
+
+ATT.PrintName = "Steyr AUG A3 Vltor 5.56x45 receiver"
+ATT.CompactName = "Vltor A3"
+ATT.Icon = Material("entities/eft_aug_attachments/newrec.png", "mips smooth")
+ATT.Description = [[A low-profile receiver with built-in tactical equipment rail for AUG A3. Manufactured by Vltor.]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_aug_rec"}
+
+ATT.EFTErgoAdd = 3
+ATT.CustomPros = { Ergonomics = "+3" }
+ATT.RecoilMult = 0.96
+ATT.VisualRecoilMult = 0.96
+ATT.HasReceiver = true
+
+ATT.Attachments = {
+    {
+        PrintName = "Barrel",
+        Category = "eft_aug_barrel",
+        Pos = Vector(-2, 0, -1.0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-0, 0, 0),
+    },
+    {
+        PrintName = "Mount",
+        Category = "eft_aug_toprec_new",
+        Pos = Vector(-1, 0, -1.5),
+        -- Pos = Vector(-2.265, 0, -0.16),
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-0, 0, 1.5),
+    },
+    {
+        PrintName = "Tactical",
+        Category = {"eft_tactical","eft_tactical_top", "eft_tactical_top_big"},
+        -- Category = {"eft_tactical", "eft_tactical_top"},
+        -- Category = "eft_tactical",
+        RejectAttachments = { 
+            ["eft_tactical_raptar"] = true,
+            ["eft_tactical_peq2"] = true,
+            ["eft_tactical_peq15"] = true,
+            ["eft_tactical_la5b"] = true,
+            ["eft_tactical_perst3"] = true,
+        },
+        Pos = Vector(2, 1.2, -1.1),
+        Ang = Angle(0, 0, 40),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_aug_upper_vltor")
+
+///////////////////////////////////////      eft_aug_upper_rail_vltor
+
+ATT = {}
+
+ATT.PrintName = "Steyr AUG A3 Corvus Defensio Receiver Rail MOI 30 Slots"
+ATT.CompactName = "A3 Corvus"
+ATT.Icon = Material("entities/eft_aug_attachments/newrail.png", "mips smooth")
+ATT.Description = [[A low-profile sight mount for AUG A3. Manufactured by Corvus Defensio.]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_aug_toprec_new"}
+
+ATT.EFTErgoAdd = -0.5
+ATT.CustomCons = { Ergonomics = "-0.5" }
+
+ATT.Attachments = {
+    {
+        PrintName = "Rear Sight",
+        Category = {"eft_rearsight"},
+        Pos = Vector(8.25, 0, -2.3),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = "Front Sight",
+        Category = {"eft_frontsight"},
+        Pos = Vector(-2.75, 0, -2.3),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = "Top Tactical",
+        Category = {"eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(0.6, 0, -2.3),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = "Optic",
+        Category = {"eft_optic_medium", "eft_optic_small", "eft_optic_large"},
+        Pos = Vector(5, 0, -2.3),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExcludeElements = {"IronsBlockingSight"},
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_aug_upper_rail_vltor")

@@ -1020,6 +1020,11 @@ SWEP.AttachmentElements = {
 
     ["eft_aug_blk"] = { Skin = 1 },
     ["eft_aug_wht"] = { Skin = 2 },
+
+    -- 0.15.5
+    ["eft_aug_grip_mount"] = { Bodygroups = { {4, 2} } },
+    ["eft_aug_upper_vltor"] = { Bodygroups = { {5, 2} } },
+    ["eft_aug_upper_rail_vltor"] = { Bodygroups = { {6, 3} } },
 }
 
 
