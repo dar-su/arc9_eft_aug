@@ -31,7 +31,7 @@ SWEP.DefaultBodygroups = "0100000000000"
 ------------------------- |||           Offsets            ||| -------------------------
 
 SWEP.WorldModelOffset = {
-    Pos = Vector(-8.3, 5.5, -6),
+    Pos = Vector(-11.5, 5.5, -4.85),
     Ang = Angle(-7, 0, 180),
     TPIKPos = Vector(-4, 4, -4), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
@@ -60,33 +60,33 @@ SWEP.BarrelLength = 32
 SWEP.Ammo = "smg1"
 SWEP.Firemodes = {
     { Mode = -1 },
-    { Mode = 1 },
+    { Mode = 1, RPM = 450 },
 }
 
 SWEP.Slot = 2
 
 ------------------------- |||           Recoil            ||| -------------------------
 
-SWEP.Recoil = 0.69 -- general multiplier of main recoil
+SWEP.Recoil = 0.75 -- general multiplier of main recoil
 
-SWEP.RecoilUp   = 3.25  -- up recoil
-SWEP.RecoilSide = 0.8 -- sideways recoil
+SWEP.RecoilUp   = 2.75  -- up recoil
+SWEP.RecoilSide = 0.5 -- sideways recoil
 SWEP.RecoilRandomUp   = 0.55 -- random up/down
-SWEP.RecoilRandomSide = 0.65   -- random left/right
+SWEP.RecoilRandomSide = 0.75   -- random left/right
 
-SWEP.RecoilAutoControl = 4.5 -- autocompenstaion, could be cool if set to high but it also affects main recoil
+SWEP.RecoilAutoControl = 4 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
 -- visual recoil   aka visrec
-SWEP.VisualRecoil = 0.69 -- general multiplier for it
+SWEP.VisualRecoil = 0.65 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.05   -- up/down tilt when semi/bursts
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.1   -- up/down tilt when semi/bursts
 SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
 SWEP.VisualRecoilSide                 = 0.08   --   when fullautoing
 SWEP.VisualRecoilRoll = 4 -- roll tilt, a visual thing
 
-SWEP.VisualRecoilPunch = 2 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 10 -- same but in sights only
+SWEP.VisualRecoilPunch = 1 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = -3 -- same but in sights only
 
 SWEP.VisualRecoilDampingConst = 100  -- spring settings, this is speed of visrec
 SWEP.VisualRecoilSpringPunchDamping = 5 -- the less this is the more wobbly gun moves
@@ -97,14 +97,15 @@ SWEP.VisualRecoilPositionBumpUp = -0.15 -- same but in sights
 SWEP.VisualRecoilPositionBumpUpRTScope = 0.05 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
 
 -- SWEP.VisualRecoilCenter = Vector(2, 14, 0) -- ugh, i dont now what to set it too, but probably it should be diffferent on each gun
+
 SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
 
 SWEP.RecoilKick = 0.3 -- camera roll each shot + makes camera go more up when fullautoing
 
 SWEP.VisualRecoilCenter = Vector(4.28, 19, -2)
-SWEP.SubtleVisualRecoil = 0.75
-SWEP.SubtleVisualRecoilDirection = 3
-SWEP.SubtleVisualRecoilSpeed = 1.25
+SWEP.SubtleVisualRecoil = 1
+SWEP.SubtleVisualRecoilDirection = 4
+SWEP.SubtleVisualRecoilSpeed = 1.0
 
 ------------------------- |||           Damage            ||| -------------------------
 
@@ -478,7 +479,7 @@ SWEP.Animations = {
 
     ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "mp7_hammer.ogg", t = 0 } } },
     ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = path .. "p90_trigger_empty.ogg", t = 0 } } },
-    ["fire_empty"] = { Source = "fire_empty", NoIdle = true, EventTable = { { s = path .. "mp7_hammer.ogg", t = 0 } } },
+    ["fire_empty"] = { Source = "fire_last", NoIdle = true, EventTable = { { s = path .. "mp7_hammer.ogg", t = 0 } } },
     ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = path .. "p90_trigger_empty.ogg", t = 0 } } },
 
     ["reload_0"] = {
