@@ -171,6 +171,13 @@ SWEP.MuzzleParticle = "muzzleflash_4"
 SWEP.ShellModel = "models/weapons/arc9_eft_shared/shells/eft_shell_556_m855.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells556
 
+SWEP.Hook_Think = function(swep) -- horrible asf
+    if swep:GetValue("HasGrip") then
+        swep.LHIKModel = nil
+        swep.LHIKModelWM  = nil
+    end
+end
+
 ------------------------- |||           Sounds            ||| -------------------------
 
 local path = "weapons/darsu_eft/aug/"
